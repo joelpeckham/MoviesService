@@ -1,0 +1,21 @@
+﻿<Window x:Class="MoviesWPF.NewMovie"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MoviesWPF"
+        mc:Ignorable="d"
+        Title="NewMovie" Height="202" Width="288">
+    <Grid Margin="0,0,10,8">
+        <Label Content="Create New Movie" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
+        <TextBox x:Name="tbTitle" Height="23" Margin="102,36,21,0" TextWrapping="Wrap" Text="[Title]" VerticalAlignment="Top"/>
+        <TextBox x:Name="tbGenre" Height="23" Margin="102,64,21,0" TextWrapping="Wrap" Text="[Genre]" VerticalAlignment="Top"/>
+        <DatePicker x:Name="dpReleaseDate" HorizontalAlignment="Left" Margin="102,92,0,0" VerticalAlignment="Top" Text="Release Date" />
+        <Label Content="Title:" HorizontalAlignment="Left" Margin="66,33,0,0" VerticalAlignment="Top"  />
+        <Label Content="Genre:" HorizontalAlignment="Left" Margin="57,61,0,0" VerticalAlignment="Top"  />
+        <Label Content="Release Date:" HorizontalAlignment="Left" Margin="21,90,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="btOk" Content="OK" HorizontalAlignment="Left" Margin="16,136,0,0" Width="75" Height="20" VerticalAlignment="Top" Click="btOk_Click"/>
+        <Button x:Name="btCancel" Content="Cancel" HorizontalAlignment="Left" Margin="102,136,0,0" Width="75" Height="20" VerticalAlignment="Top" Click="btCancel_Click"/>
+
+    </Grid>
+</Window>

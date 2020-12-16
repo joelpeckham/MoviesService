@@ -1,0 +1,46 @@
+﻿<Window x:Class="MoviesWPF.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MoviesWPF"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Window.DataContext>
+        <local:MoviesViewModel/>
+    </Window.DataContext>
+    <Grid Margin="0,0,10,0">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="43"/>
+            <RowDefinition Height="43"/>
+            <RowDefinition Height="43"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Label Grid.Row="0" Content="Id:" HorizontalAlignment="Left" Margin="15,7,0,0" VerticalAlignment="Top"/>
+        <TextBox HorizontalAlignment="Left" Margin="38,0,0,0" VerticalAlignment="Center" TextWrapping="Wrap" Text="{Binding Current.Id}" IsReadOnly="True" Width="51" Height="23" />
+        <Label Grid.Row="0" Content="Title:" HorizontalAlignment="Left" Margin="110,7,0,0" VerticalAlignment="Top"/>
+        <TextBox HorizontalAlignment="Left" Margin="145,0,0,0" VerticalAlignment="Center" TextWrapping="Wrap" Text="{Binding Current.Title}" Height="23" Width="459" />
+        <Label Grid.Row="0" Content="Genre:" HorizontalAlignment="Right" Margin="0,7,124,0" VerticalAlignment="Top" Width="44"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="666,0,0,0" TextWrapping="Wrap" Text="{Binding Current.Genre}" VerticalAlignment="Center" Width="105"/>
+        <Label Grid.Row="1" Content="Release Date:" HorizontalContentAlignment="Left" Margin="10,0,0,0" VerticalAlignment="Center"/>
+        <DatePicker Grid.Row="1" HorizontalAlignment="Left" Margin="93,0,0,0" VerticalAlignment="Center" SelectedDate="{Binding Current.ReleaseDate}" Height="26" />
+        <DataGrid Grid.Row="3" Margin="10" ItemsSource="{Binding Movies}" AutoGenerateColumns="False" IsReadOnly="True" SelectedItem="{Binding Current}">
+            <DataGrid.ContextMenu>
+                <ContextMenu>
+                    <MenuItem Header="Delete" Command="{Binding DeleteSelectedCmd}"/>
+                </ContextMenu>
+            </DataGrid.ContextMenu>
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="ID" Binding="{Binding Id}" Width="SizeToCells" MinWidth="40"/>
+                <DataGridTextColumn Header="Title" Binding="{Binding Title}" Width="*"/>
+                <DataGridTextColumn Header="Genre" Binding="{Binding Genre}" Width="SizeToCells" MinWidth="200"/>
+                <DataGridTextColumn Header="Release Date" Binding="{Binding ReleaseDate, StringFormat={}{0:MM/dd/yyyy}}" Width="SizeToCells" MinWidth="120"/>
+            </DataGrid.Columns>
+        </DataGrid>
+        <Button x:Name="btNewMovie" Content="New Movie" Command="{Binding NewMovieCmd}" HorizontalAlignment="Left" Margin="302,4,0,0" Grid.Row="1" VerticalAlignment="Center" Width="75" Height="26"/>
+        <Button x:Name="btUpdate" Content="Update Current" Command="{Binding UpdateCurrentCmd}" HorizontalAlignment="Left" Margin="203,4,0,0" Grid.Row="1" VerticalAlignment="Center" Width="90" Height="26"/>
+    </Grid>
+</Window>

@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30503.244
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MoviesService2020", "WcfService1\MoviesService2020.csproj", "{45C6E6C3-7314-40A6-A28A-52EA005A0A1F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MoviesWPF", "MoviesWPF\MoviesWPF.csproj", "{A0F6C9ED-4A59-446E-B66A-A54A6DD9246F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{45C6E6C3-7314-40A6-A28A-52EA005A0A1F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{45C6E6C3-7314-40A6-A28A-52EA005A0A1F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{45C6E6C3-7314-40A6-A28A-52EA005A0A1F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{45C6E6C3-7314-40A6-A28A-52EA005A0A1F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A0F6C9ED-4A59-446E-B66A-A54A6DD9246F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A0F6C9ED-4A59-446E-B66A-A54A6DD9246F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A0F6C9ED-4A59-446E-B66A-A54A6DD9246F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A0F6C9ED-4A59-446E-B66A-A54A6DD9246F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {32FA59F3-F8FD-4FA7-9B70-B48609BDDEE5}
+	EndGlobalSection
+EndGlobal
